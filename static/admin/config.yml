@@ -19,17 +19,28 @@ publish_mode: editorial_workflow
 #     previewStep: true
 #     clearable: true
 
+
+
 media_library:
   name: cloudinary
   config:
-    cloud_name: 673516864624274
+    cloud_name: duxt6i5yp
     api_key: 673516864624274
-    multiple: false
-    tabs: 'file camera url facebook gdrive'
-    effects: 'crop,rotate,enhance,grayscale'
-    imageShrink: '2000x2000'
-    previewStep: true
-    clearable: true
+    default_transformations:
+      - - fetch_format: auto
+          width: 160
+          quality: auto
+          crop: scale
+
+    # multiple: false
+    # tabs: 'file camera url facebook gdrive'
+    # effects: 'crop,rotate,enhance,grayscale'
+    # imageShrink: '2000x2000'
+    # previewStep: true
+    # clearable: true
+
+
+
 
 collections: # A list of collections the CMS should be able to edit
   - name: 'pages'
