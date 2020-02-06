@@ -26,11 +26,11 @@ media_library:
   config:
     cloud_name: duxt6i5yp
     api_key: 673516864624274
-    default_transformations:
-      - - fetch_format: auto
-          width: 160
-          quality: auto
-          crop: scale
+    # default_transformations:
+    #   - - fetch_format: auto
+    #       width: 160
+    #       quality: auto
+    #       crop: scale
 
     # multiple: false
     # tabs: 'file camera url facebook gdrive'
