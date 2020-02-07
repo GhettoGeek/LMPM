@@ -2,7 +2,8 @@
 template: ContactPage
 slug: contact
 title: Contact Page
-featuredImage: 'https://ucarecdn.com/e22a858a-b420-47af-99f6-ed54b6860333/'
+featuredImage: >-
+  https://res.cloudinary.com/duxt6i5yp/image/upload/v1581098909/stock-photo-solar-panel-on-a-roof-of-a-house-and-wind-turbins-arround-concept-of-sustainable-resources-585345260_kgst7q.jpg
 subtitle: I am contact page!
 address: '404 James St, Burleigh Heads QLD 4220'
 phone: '2159222636'
