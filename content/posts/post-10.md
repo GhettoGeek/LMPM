@@ -8,6 +8,7 @@ featuredImage: >-
 excerpt: This is an excerpt of Post Two
 categories:
   - category: News
+  - category: Updates
 meta:
   description: test meta description
   title: test meta title
