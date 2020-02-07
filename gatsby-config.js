@@ -2,8 +2,8 @@ const postcssPresetEnv = require('postcss-preset-env')
 
 module.exports = {
   siteMetadata: {
-    title: 'Yelloecake',
-    siteUrl: 'https://yellowcake.netlify.com'
+    title: 'LM Property MGMT',
+    siteUrl: 'https://lmp.netlify.com'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -16,31 +16,7 @@ module.exports = {
         includeInDevelopment: false
       }
     },
-    {
-      resolve: 'gatsby-plugin-offline',
-      options: {
-        runtimeCaching: [
-          {
-            // Use cacheFirst since these don't need to be revalidated (same RegExp
-            // and same reason as above)
-            urlPattern: /(\.js$|\.css$|static\/)/,
-            handler: `cacheFirst`
-          },
-          {
-            // Add runtime caching of various other page resources
-            urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
-            handler: `staleWhileRevalidate`
-          },
-          {
-            // uploadcare
-            urlPattern: /^https:\/\/ucarecdn.com\/[-a-zA-Z0-9@:%_\+.~#?&//=]*?\/10x\//,
-            handler: `staleWhileRevalidate`
-          }
-        ],
-        skipWaiting: true,
-        clientsClaim: true
-      }
-    },
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -132,6 +108,31 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
         stylesPath: `${__dirname}/src/cms/admin.css`,
         enableIdentityWidget: true
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        runtimeCaching: [
+          {
+            // Use cacheFirst since these don't need to be revalidated (same RegExp
+            // and same reason as above)
+            urlPattern: /(\.js$|\.css$|static\/)/,
+            handler: `cacheFirst`
+          },
+          {
+            // Add runtime caching of various other page resources
+            urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
+            handler: `staleWhileRevalidate`
+          },
+          {
+            // uploadcare
+            urlPattern: /^https:\/\/ucarecdn.com\/[-a-zA-Z0-9@:%_\+.~#?&//=]*?\/10x\//,
+            handler: `staleWhileRevalidate`
+          }
+        ],
+        skipWaiting: true,
+        clientsClaim: true
       }
     },
     'gatsby-plugin-netlify' // make sure to keep it last in the array
